@@ -4,6 +4,7 @@ def new_in_list(list, idx, element):
     new_list = []
     for i in range(len(list)):
         if i == idx:
-            new_list[i] = element
+            new_list.append(element)
         else:
-            new_list[i] = list[i]
+            new_list.append(list[i])
+    return new_list
