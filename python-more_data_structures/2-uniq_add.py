@@ -7,7 +7,7 @@ def uniq_add(list=[]):
         for j in new_list:
             if i == j:
                 unique = False
-        if unique == True:
+        if unique is True:
             new_list.append(i)
     sum = 0
     for i in new_list:
