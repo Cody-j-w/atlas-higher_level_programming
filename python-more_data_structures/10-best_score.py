@@ -7,3 +7,4 @@ def best_score(a_dict):
 
 my_dict = {'a': -23, 'b': -2, 'c': -1, 'd': -46}
 print(best_score(my_dict))
+
