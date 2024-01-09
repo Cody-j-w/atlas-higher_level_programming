@@ -2,6 +2,8 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     idx = 0
+    if my_list is None:
+        return idx
     for i in range(x):
         try:
             print("{:d}".format(my_list[i]), end="")
@@ -13,3 +15,5 @@ def safe_print_list_integers(my_list=[], x=0):
             return idx
     print("")
     return idx
+
+
