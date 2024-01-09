@@ -9,6 +9,3 @@ def print_matrix_integer(matrix=[[]]):
             print("")
     else:
         print("")
-
-
-print_matrix_integer(None)
