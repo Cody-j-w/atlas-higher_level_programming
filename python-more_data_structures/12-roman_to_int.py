@@ -14,7 +14,3 @@ def roman_to_int(s):
                 res += r_v[s[i]]
                 i += 1
     return res
-
-
-print(roman_to_int(None))
-print(roman_to_int(69))
