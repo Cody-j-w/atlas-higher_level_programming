@@ -53,7 +53,10 @@ class Square:
         """
         print the area of the square
         """
-        for i in range(self.size):
-            for j in range(self.size):
-                print("#", end="")
+        if self.size < 1:
             print("")
+        else:
+            for i in range(self.size):
+                for j in range(self.size):
+                    print("#", end="")
+                print("")
