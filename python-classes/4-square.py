@@ -33,7 +33,6 @@ class Square:
         Args:
             value: the value to set size as
         """
-        print("value {0} is of type {1}". format(value, type(value)))
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
