@@ -7,8 +7,3 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
-
-try:
-    print(add_integer(None, "School"))
-except Exception as e:
-    print(e)
