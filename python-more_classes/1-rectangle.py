@@ -18,7 +18,6 @@ class Rectangle:
             height: define the Y axis of the rectangle
         """
 
-
         self.width = width
         self.height = height
 
