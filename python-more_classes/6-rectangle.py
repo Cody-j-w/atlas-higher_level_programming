@@ -13,6 +13,7 @@ class Rectangle:
         number_of_instances: the number of Rectangle instances
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         The __init__ method for the Rectangle class
