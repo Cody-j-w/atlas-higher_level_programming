@@ -1,25 +1,20 @@
 >>> text_indentation = __import__("5-text_indentation").text_indentation
 
->>> long = "this is a lengthy string. It includes a number of characters that
->>> break the line: a period and a colon so far, but where is the question mark? Oh, there it is"
+>>> long = "this is a lengthy string. It includes a number of characters that break the line: a period and a colon so far, but where is the question mark? Oh, there it is"
 >>> text_indentation(long)
 this is a lengthy string.
 <BLANKLINE>
-<BLANKLINE>
 It includes a number of characters that break the line:
-<BLANKLINE>
 <BLANKLINE>
 a period and a colon so far, but where is the question mark?
 <BLANKLINE>
-<BLANKLINE>
 Oh, there it is
 
->>>text_indentation("Hello")
+>>> text_indentation("Hello")
 Hello
 
->>>text_indentation("Hello.")
-Hello
-<BLANKLINE>
+>>> text_indentation("Hello.")
+Hello.
 <BLANKLINE>
 
 >>> text_indentation(42)
