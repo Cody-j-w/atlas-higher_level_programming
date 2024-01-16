@@ -28,7 +28,8 @@ class Rectangle:
         for y in range(self.height):
             for x in range(self.width):
                 rect_str += "#"
-            rect_str += "\n"
+            if y != self.height - 1:
+                rect_str += "\n"
         return rect_str
 
     @property
