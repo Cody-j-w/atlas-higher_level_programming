@@ -21,6 +21,16 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        rect_str = ""
+        if self.height == 0 or self.width == 0:
+            return rect_str
+        for y in range(self.height):
+            for x in range(self.width):
+                rect_str += "#"
+            rect_str += "\n"
+        return rect_str
+
     @property
     def width(self):
         return self.__width
@@ -46,7 +56,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        if self.width == 0 or self.height == 0:
+            return 0
         return self.width * self.height
 
     def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
         return (self.width * 2) + (self.height * 2)
