@@ -35,7 +35,7 @@ class Rectangle:
             return rect_str
         for y in range(self.height):
             for x in range(self.width):
-                rect_str += self.print_symbol
+                rect_str += str(self.print_symbol)
             if y != self.height - 1:
                 rect_str += "\n"
         return rect_str
