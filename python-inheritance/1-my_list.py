@@ -17,7 +17,3 @@ class MyList(list):
                 temp_list[mindex] = temp_list[i]
                 temp_list[i] = min
         print(temp_list)
-
-my_list = MyList([1, 2, 6, 2, 8, 6, 2])
-
-my_list.print_sorted()
