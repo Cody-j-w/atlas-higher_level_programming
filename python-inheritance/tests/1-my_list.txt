@@ -16,7 +16,7 @@
 >>> my_list = MyList([1, 2, 6, 2, 6, 2, 8])
 >>> my_list.print_sorted()
 [1, 2, 2, 2, 6, 6, 8]
->>>print(my_list)
+>>> print(my_list)
 [1, 2, 6, 2, 6, 2, 8]
 
 >>> my_list = MyList([-1, -2, -3, -4, -5])
