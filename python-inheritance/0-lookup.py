@@ -13,4 +13,9 @@ def lookup(obj):
     Args:
         obj: the object type to retrieve the methods of
     """
-    return dir(obj)
+    obj_methods = [method_name for method_name in dir(obj)
+    if callable(getattr(obj, method_name))]
+
+    return obj_methods
+
+print(lookup(list))
