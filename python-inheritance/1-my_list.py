@@ -1,8 +1,18 @@
 #!/usr/bin/python3
 
+"""
+Module containing MyList subclass of list object
+"""
+
 class MyList(list):
+    """
+    The Mylist class, inherits from list class
+    """
 
     def print_sorted(self):
+        """
+        print_sorted prints the list it belongs to, sorted low to high
+        """
         temp_list = []
         for i in self:
             temp_list.append(i)
