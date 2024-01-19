@@ -13,4 +13,4 @@ def lookup(obj):
     Args:
         obj: the object type to retrieve the methods of
     """
-    return dir(obj)
+    return list(dir(obj))
