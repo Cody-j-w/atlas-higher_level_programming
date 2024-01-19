@@ -4,6 +4,7 @@
 Module containing MyList subclass of list object
 """
 
+
 class MyList(list):
     """
     The Mylist class, inherits from list class
