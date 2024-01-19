@@ -14,5 +14,3 @@ def lookup(obj):
         obj: the object type to retrieve the methods of
     """
     return dir(obj)
-
-print(lookup(int))
