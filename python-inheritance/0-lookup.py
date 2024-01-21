@@ -5,6 +5,7 @@ Module containing the lookup function, which returns a list of all of the
 methods of the object class passed as a parameter
 """
 
+
 def lookup(obj):
     """
     look up function accepts an object (e.g list, int, string) as a paramater
@@ -13,4 +14,12 @@ def lookup(obj):
     Args:
         obj: the object type to retrieve the methods of
     """
-    return [method for method in dir(obj) if callable(getattr(obj, method))]
+
+
+    method_list = []
+    for method in dir(obj):
+        if obj is float and (method == '__ceil__' or method == '__floor__'):
+            continue
+        else:
+            method_list.append(method)
+    return method_list
