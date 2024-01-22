@@ -22,6 +22,6 @@ def lookup(obj):
         # elif obj is list and (method == '__class_getitem__'):
         #     continue
         
-        else:
-            method_list.append(method)
+        # else:
+        method_list.append(method)
     return method_list
