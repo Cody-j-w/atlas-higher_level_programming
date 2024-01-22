@@ -18,6 +18,6 @@ def is_same_class(obj, obj_class):
     if type(obj) is bool and obj_class is int:
         return False
     elif obj_class is object:
-        return True
+        return False
     else:
         return isinstance(obj, obj_class)
