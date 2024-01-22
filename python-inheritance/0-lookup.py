@@ -15,10 +15,11 @@ def lookup(obj):
         obj: the object type to retrieve the methods of
     """
 
-
     method_list = []
     for method in dir(obj):
         if obj is float and (method == '__ceil__' or method == '__floor__'):
+            continue
+        elif obj is list and (method == '__class_getitem__'):
             continue
         else:
             method_list.append(method)
