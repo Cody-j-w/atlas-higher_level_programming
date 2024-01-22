@@ -1,0 +1,23 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> geo = BaseGeometry()
+>>> type(geo)
+<class '7-base_geometry.BaseGeometry'>
+
+>>> geo.integer_validator("name", "Frank")
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+>>> geo.integer_validator("age", -42)
+Traceback (most recent call last):
+    ...
+ValueError: age must be greater than 0
+
+>>> geo.integer_validator("value", 12)
+
+
+>>> geo.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
