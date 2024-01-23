@@ -21,9 +21,10 @@ class Student:
 
     def to_json(self, attrs=None):
         attr_dict = vars(self)
-        new_dict = dict()
         if attrs is not None:
+            new_dict = dict()
             for key in attrs:
                 if key in attr_dict:
                     new_dict[key] = attr_dict[key]
-        return new_dict
+            return new_dict
+        return attr_dict
