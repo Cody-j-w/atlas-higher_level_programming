@@ -5,7 +5,7 @@ module containing a function that reads the contents of a file
 """
 
 
-def read_file(filename=""):
+def load_from_json_file(filename=""):
     """
     read_file opens a file, reads its contents, and prints those contents
     """
