@@ -21,7 +21,8 @@ class Student:
 
     def to_json(self, attrs=None):
         attr_dict = vars(self)
-        for key in attr_dict if attrs is not None:
-            if key not in attrs:
-                del attr_dict[key]
+        if attrs is not None:
+            for key in attr_dict:
+                if key not in attrs:
+                    del attr_dict[key]
         return attr_dict
