@@ -15,7 +15,7 @@ def class_to_json(obj):
         obj: the class object being serialized
     """
 
-    attrs = [att for att in dir(obj) if not callable(getattr(obj, a))]
+    attrs = [att for att in dir(obj) if not callable(getattr(obj, att))]
     attr_dict = dict()
     for att in attrs:
         attr_dict[att] = obj.att
