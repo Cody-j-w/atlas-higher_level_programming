@@ -4,8 +4,8 @@
 module containing a json stringification function
 """
 
-
 import json
+
 
 def to_json_string(obj):
     """
