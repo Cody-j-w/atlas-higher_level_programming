@@ -3,6 +3,7 @@
 """
 module containing a function that reads the contents of a file
 """
+import json
 
 
 def load_from_json_file(filename=""):
