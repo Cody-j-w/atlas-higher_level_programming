@@ -3,7 +3,7 @@
 """
 Module containing Rectangle class model, inheriting from Base class model
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
