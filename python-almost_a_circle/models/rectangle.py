@@ -85,10 +85,10 @@ class Rectangle(Base):
         display a visual representation of the Rectangle instance
         """
         for y in range(self.y):
-                print("")
+            print("")
         for i in range(self.height):
             for x in range(self.x):
-                    print(" ", end="")
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
             print("")
