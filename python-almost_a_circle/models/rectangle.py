@@ -18,6 +18,14 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        i = self.id
+        x = self.x
+        y = self.y
+        w = self.width
+        h = self.height
+        print("[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(i, x, y, w, h))
+
     @property
     def width(self):
         return self.__width
