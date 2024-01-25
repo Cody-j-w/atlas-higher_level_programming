@@ -4,6 +4,7 @@
 Module containing the Base class model
 """
 
+
 class Base:
     """
     Base class model
