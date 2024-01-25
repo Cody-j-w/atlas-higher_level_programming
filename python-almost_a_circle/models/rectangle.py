@@ -93,7 +93,7 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update method for Rectangle class
         Accepts a list of arguments and updates attributes in a set order
@@ -108,3 +108,5 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        for key, value in kwarg.items():
+            setattr(self, key, value)
