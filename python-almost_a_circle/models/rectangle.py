@@ -94,6 +94,10 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
+        """
+        update method for Rectangle class
+        Accepts a list of arguments and updates attributes in a set order
+        """
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
