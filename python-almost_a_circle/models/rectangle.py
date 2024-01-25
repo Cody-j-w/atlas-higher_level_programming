@@ -76,7 +76,7 @@ class Rectangle(Base):
         """
         display a visual representation of the Rectangle instance
         """
-        for i in range(height):
-            for j in range (width):
+        for i in range(self.height):
+            for j in range (self.width):
                 print("#", end="")
             print("")
