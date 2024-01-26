@@ -6,6 +6,7 @@ Module containing the Base class model
 import json
 
 
+
 class Base:
     """
     Base class model
@@ -33,3 +34,13 @@ class Base:
         if list_dictionaries is None:
             return empty_list
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        class method to save a list of instances to a file
+        """
+        filename = "{}.json".format(cls.__name__)
+
+        with open(filename, 'w') as file:
+        file.write(list_objs)
