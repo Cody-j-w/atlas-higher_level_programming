@@ -115,4 +115,9 @@ class Rectangle(Base):
         """
         return a dictionary of the calling instance's attributes
         """
-        return vars(self)
+        i = self.id
+        x = self.x
+        y = self.y
+        w = self.width
+        h = self.height
+        return {'id': i, 'width': w, 'height': h, 'x': x, 'y': y}
