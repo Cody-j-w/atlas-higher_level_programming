@@ -29,6 +29,6 @@ class Base:
         Base class method to return a list of JSON stringified dictionaries of
         instances
         """
-        if list_dictionaries is None
+        if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
