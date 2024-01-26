@@ -110,3 +110,9 @@ class Rectangle(Base):
             self.y = args[4]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        return a dictionary of the calling instance's attributes
+        """
+        return vars(self)
