@@ -44,7 +44,7 @@ class Base:
         objects = []
         if list_objs is not None:
             for obj in list_objs:
-                objects.append(vars(obj))
+                objects.append(obj.to_dictionary())
 
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(objects))
