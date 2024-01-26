@@ -4,6 +4,8 @@
 Module containing the Base class model
 """
 import json
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class Base:
@@ -59,6 +61,10 @@ class Base:
         create()
         class method to create a new instance of either a Rectangle or a Square
         """
-        new_obj = cls()
+
+        if cls.__name__ is Rectangle:
+            new_obj = cls(1, 1)
+        if cls.__name__ is Square:
+            new_obj = cls(1)
         new_obj.update(**dictionary)
         return new_obj
