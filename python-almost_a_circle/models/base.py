@@ -41,6 +41,9 @@ class Base:
         class method to save a list of instances to a file
         """
         filename = "{}.json".format(cls.__name__)
+        objects = []
+        for obj in list_objs:
+            objects.append(vars(obj))
 
         with open(filename, 'w') as file:
-            file.write(cls.to_json_string(list_objs))
+            file.write(cls.to_json_string(objects))
