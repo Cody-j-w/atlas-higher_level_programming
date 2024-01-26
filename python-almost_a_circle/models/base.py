@@ -47,9 +47,18 @@ class Base:
 
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(objects))
-
     @staticmethod
     def from_json_string(json_string):
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        create()
+        class method to create a new instance of either a Rectangle or a Square
+        """
+        new_obj = cls(1, 1)
+        new_obj.update(**dictionary)
+        return new_obj
