@@ -29,7 +29,7 @@ class Base:
         Base class method to return a list of JSON stringified dictionaries of
         instances
         """
-        empty_list = []
+        empty_list = "[]"
         if list_dictionaries is None:
             return empty_list
         return json.dumps(list_dictionaries)
