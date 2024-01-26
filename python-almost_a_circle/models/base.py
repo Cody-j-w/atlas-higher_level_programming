@@ -6,7 +6,6 @@ Module containing the Base class model
 import json
 
 
-
 class Base:
     """
     Base class model
