@@ -19,4 +19,4 @@ class Square(Rectangle):
         x = self.x
         y = self.y
         s = self.width
-        print("[Square] ({0}) {1}/{2} - {3}".format(i, x, y, s))
+        return "[Square] ({0}) {1}/{2} - {3}".format(i, x, y, s)
