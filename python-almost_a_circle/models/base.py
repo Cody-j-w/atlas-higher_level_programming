@@ -3,6 +3,7 @@
 """
 Module containing the Base class model
 """
+import json
 
 
 class Base:
@@ -21,3 +22,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        Base class method to return a list of JSON stringified dictionaries of
+        instances
+        """
+        return json.dumps(list_dictionaries)
