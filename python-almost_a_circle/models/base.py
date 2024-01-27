@@ -4,6 +4,7 @@
 Module containing the Base class model
 """
 import json
+from os.path import isfile
 
 
 class Base:
@@ -44,9 +45,24 @@ class Base:
         if list_objs is not None:
             for obj in list_objs:
                 objects.append(obj.to_dictionary())
-
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(objects))
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        class method to load a list of instances from a file
+        """
+        filename = "{}.json".format(cls.__name__)
+        if not isfile(filename):
+            return []
+        with open(filename, 'r') as file:
+            obj_list = cls.from_json_string(file.read())
+        inst_list = []
+        for obj in obj_list:
+            inst_list.append(cls.create(**obj))
+        return inst_list
+
 
     @staticmethod
     def from_json_string(json_string):
