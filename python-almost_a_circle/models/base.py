@@ -63,7 +63,6 @@ class Base:
             inst_list.append(cls.create(**obj))
         return inst_list
 
-
     @staticmethod
     def from_json_string(json_string):
         if json_string is None or json_string == "":
