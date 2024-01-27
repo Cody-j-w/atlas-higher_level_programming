@@ -59,10 +59,9 @@ class Base:
         create()
         class method to create a new instance of either a Rectangle or a Square
         """
-
-        if type(cls) is Rectangle:
+        if cls.__name__ == "Rectangle":
             new_obj = cls(1, 1)
-        if type(cls) is Square:
+        if cls.__name__ == "Square":
             new_obj = cls(1)
         new_obj.update(**dictionary)
         return new_obj
