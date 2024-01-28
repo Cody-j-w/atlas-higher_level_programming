@@ -24,7 +24,7 @@ class Rectangle(Base):
         y = self.y
         w = self.width
         h = self.height
-        print("[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(i, x, y, w, h))
+        return "[Rectangle] ({0}) {1}/{2} - {3}/{4}".format(i, x, y, w, h)
 
     @property
     def width(self):
