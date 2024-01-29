@@ -14,6 +14,10 @@ class TestBaseAttributes(unittest.TestCase):
         test_obj = Base()
         self.assertEqual(test_obj.id, 1)
 
+    def test_custom_id(self):
+        id_obj = Base(89)
+        self.assertEqual(id_obj.id, 89)
+
 class TestJSONStringMethod(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(Base.to_json_string(None), "[]")
@@ -32,6 +36,19 @@ class TestJSONStringMethod(unittest.TestCase):
 
 # class TestLoadFileMethod(unittest.TestCase):
 
-# class TestFromJSONMethod(unittest.TestCase):
+class TestFromJSONMethod(unittest.TestCase):
+    def test_none_param(self):
+        presumably_empty = Base.from_json_string(None)
+        self.assertEqual(presumably_empty, [])
+
+    def test_empty_param(self):
+        just_empty = Base.from_json_string("[]")
+        self.assertEqual(just_empty, [])
+
+    def test_base_dict(self):
+        base_dict = {'id': 42}
+        dict_list = [base_dict]
+        json_list = Base.to_json_string(dict_list)
+        self.assertEqual(Base.from_json_string(json_list), [{'id': 42}])
 
 # class TestCreateMethod(unittest.TestCase):
