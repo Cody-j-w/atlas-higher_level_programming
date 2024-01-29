@@ -5,6 +5,8 @@ from models.base import Base
 from models.rectangle import Rectangle
 from io import StringIO
 import sys
+from os.path import isfile
+from os import remove
 
 
 class TestRectangleAttributes(unittest.TestCase):
@@ -110,3 +112,24 @@ class TestRectangleUpdateMethod(unittest.TestCase):
         self.assertEqual(new_rectangle.height, 20)
         self.assertEqual(new_rectangle.x, 2)
         self.assertEqual(new_rectangle.y, 2)
+
+class TestCreateMethod(unittest.TestCase):
+    def test_create_id_only(self):
+        r1 = Rectangle.create(**{'id': 100})
+        self.assertEqual(r1.__str__(), "[Rectangle] (100) 0/0 - 1/1")
+
+    def test_create_all_attrs(self):
+        r2_dict = {'id': 200, 'width': 20, 'height': 20, 'x': 2, 'y': 2}
+        r2 = Rectangle.create(**r2_dict)
+        self.assertEqual(r2.__str__(), "[Rectangle] (200) 2/2 - 20/20")
+
+class TestSaveLoadMethods(unittest.TestCase):
+    def test_nonexistent(self):
+        remove('Rectangle.json')
+        self.assertIs(isfile('Rectangle.json'), False)
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_none(self):
+        Rectangle.save_to_file(None)
+        self.assertIs(isfile('Rectangle.json'), True)
+        self.assertEqual(Rectangle.load_from_file(), [])
