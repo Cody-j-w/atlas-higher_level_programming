@@ -7,6 +7,13 @@ from models.square import Square
 from io import StringIO
 import sys
 
+
+class TestBaseAttributes(unittest.TestCase):
+    def test_id_assignment(self):
+        self.assertEqual(Base._Base__nb_objects, 0)
+        test_obj = Base()
+        self.assertEqual(test_obj.id, 1)
+
 class TestJSONStringMethod(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(Base.to_json_string(None), "[]")
@@ -20,11 +27,11 @@ class TestJSONStringMethod(unittest.TestCase):
     def test_success(self):
         rect_1 = Rectangle(4, 5)
         dict_1 = rect_1.to_dictionary()
-        expected = '[{"id": 1, "width": 4, "height": 5, "x": 0, "y": 0}]'
+        expected = '[{"id": 2, "width": 4, "height": 5, "x": 0, "y": 0}]'
         self.assertEqual(Base.to_json_string([dict_1]), expected)
 
-class TestLoadFileMethod(unittest.TestCase):
+# class TestLoadFileMethod(unittest.TestCase):
 
-class TestFromJSONMethod(unittest.TestCase):
+# class TestFromJSONMethod(unittest.TestCase):
 
-class TestCreateMethod(unittest.TestCase):
+# class TestCreateMethod(unittest.TestCase):
