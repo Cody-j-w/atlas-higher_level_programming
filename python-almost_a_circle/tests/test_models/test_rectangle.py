@@ -133,3 +133,13 @@ class TestSaveLoadMethods(unittest.TestCase):
         Rectangle.save_to_file(None)
         self.assertIs(isfile('Rectangle.json'), True)
         self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_save_empty(self):
+        Rectangle.save_to_file([])
+        self.assertIs(isfile('Rectangle.json'), True)
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+    def test_save_success(self):
+        Rectangle.save_to_file([Rectangle(5, 5, 0, 0, 33)])
+        rect_list = Rectangle.load_from_file()
+        self.assertEqual(rect_list[0].__str__(), "[Rectangle] (33) 0/0 - 5/5")
