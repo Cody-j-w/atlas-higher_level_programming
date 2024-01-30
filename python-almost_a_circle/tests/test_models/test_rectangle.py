@@ -125,7 +125,8 @@ class TestCreateMethod(unittest.TestCase):
 
 class TestSaveLoadMethods(unittest.TestCase):
     def test_nonexistent(self):
-        remove('Rectangle.json')
+        if isfile('Rectangle.json'):
+            remove('Rectangle.json')
         self.assertIs(isfile('Rectangle.json'), False)
         self.assertEqual(Rectangle.load_from_file(), [])
 
