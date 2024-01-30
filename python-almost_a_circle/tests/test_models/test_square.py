@@ -87,11 +87,10 @@ class TestSquareMethods(unittest.TestCase):
         res = Square.load_from_file()
         self.assertEqual(res, [])
 
-    def test_save_and_load_none(self):
+    def test_none(self):
         Square.save_to_file(None)
         self.assertIs(isfile('Square.json'), True)
-        res = Square.load_from_file()
-        self.assertEqual(res, [])
+        self.assertEqual(Square.load_from_file(), [])
 
     def test_save_and_load_empty(self):
         Square.save_to_file([])
