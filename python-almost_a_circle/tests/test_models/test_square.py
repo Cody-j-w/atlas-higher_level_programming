@@ -92,11 +92,10 @@ class TestSquareMethods(unittest.TestCase):
         self.assertIs(isfile('Square.json'), True)
         self.assertEqual(Square.load_from_file(), [])
 
-    def test_save_and_load_empty(self):
+    def test_save_empty(self):
         Square.save_to_file([])
         self.assertIs(isfile('Square.json'), True)
-        res = Square.load_from_file()
-        self.assertEqual(res, [])
+        self.assertEqual(Square.load_from_file(), [])
 
     def test_save_and_load_not_empty(self):
         s1 = Square(3, 3, 3, 333)
