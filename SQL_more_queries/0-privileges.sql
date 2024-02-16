@@ -1,2 +1,2 @@
--- show the privileges of all users 
-SHOW GRANTS;
+-- show the privileges of users 
+SHOW GRANTS FOR user_0d_1@localhost;
