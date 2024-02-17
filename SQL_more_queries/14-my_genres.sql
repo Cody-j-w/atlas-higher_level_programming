@@ -1,3 +1,5 @@
+-- query a many-to-many join to get all the genres associated with a show title
+
 SELECT name
     FROM tv_genres AS genre
     LEFT JOIN tv_show_genres AS sg
