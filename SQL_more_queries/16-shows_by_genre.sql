@@ -1,4 +1,4 @@
-List all show titles and associated genre names
+-- List all show titles and associated genre names
 
 SELECT tv_shows.title, tv_genres.name
 FROM tv_shows
