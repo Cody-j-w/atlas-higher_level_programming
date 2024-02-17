@@ -6,4 +6,5 @@ SELECT name
     ON (sg.genre_id = genre.id)
     LEFT JOIN tv_shows AS shows
     ON (shows.id = sg.show_id)
-    WHERE shows.title = 'Dexter';
+    WHERE shows.title = 'Dexter'
+    ORDER BY name ASC;
