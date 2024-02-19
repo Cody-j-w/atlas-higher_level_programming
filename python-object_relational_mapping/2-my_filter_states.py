@@ -20,7 +20,7 @@ if __name__ == '__main__':
     staterows = cur.execute(
         """SELECT *
         FROM states
-        WHERE name='{}'
+        WHERE name=BINARY '{}'
         ORDER BY states.id;""".format(state)
         )
     for row in cur._rows:
