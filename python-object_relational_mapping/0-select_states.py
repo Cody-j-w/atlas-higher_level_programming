@@ -3,6 +3,10 @@
 import MySQLdb
 import sys
 
+"""
+select_states - run a query on a mysql DB using the MySQLdb module
+"""
+
 if __name__ == '__main__':
 
     user = sys.argv[1]
