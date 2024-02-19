@@ -28,4 +28,5 @@ if __name__ == '__main__':
     staterows = cur.execute(query, (state,))
     rows = cur.fetchall()
     for i in range(len(rows)):
-        print(rows[i][0], end=", " if i < len(rows) - 1 else "\n")
+        print(rows[i][0], end=", " if i < len(rows) - 1 else "")
+    print("")
