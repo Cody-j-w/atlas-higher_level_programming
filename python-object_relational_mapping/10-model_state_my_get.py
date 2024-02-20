@@ -24,7 +24,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state_records = session.query(State).filter(State.name == state)
+    state_record = session.query(State).filter(State.name == state).one_or_none()
 
-    for state in state_records:
-        print(state.id)
+    if state_record is None:
+        print("Not found")
+    else:
+        print(state_record.id)
