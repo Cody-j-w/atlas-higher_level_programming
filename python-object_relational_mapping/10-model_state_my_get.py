@@ -27,4 +27,4 @@ if __name__ == '__main__':
     state_records = session.query(State).filter(State.name == state)
 
     for state in state_records:
-        print("{}: {}".format(state.id, state.name))
+        print(state.id)
