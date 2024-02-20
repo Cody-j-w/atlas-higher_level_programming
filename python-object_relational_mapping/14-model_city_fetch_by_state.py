@@ -26,8 +26,8 @@ if __name__ == '__main__':
     session = Session()
 
     citystates = (session.query(State, City)
-        .filter(State.id == City.state_id).all()
-    )
+                    .filter(State.id == City.state_id).all()
+                )
 
     for s, c in citystates:
         print("{0}: ({1}) {2}".format(s.name, c.id, c.name))
