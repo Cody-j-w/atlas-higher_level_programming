@@ -10,14 +10,15 @@ from sys import argv
 
 if __name__ == '__main__':
 
-    if len(argv) > 1:
-        user = argv[1]
-    if len(argv) > 2:
-        pwd = argv[2]
-    if len(argv) > 3:
-        db = argv[3]
+    user = argv[1]
+    pwd = argv[2]
+    db = argv[3]
+    host = 'localhost'
+    dia = 'mysql+mysqldb'
 
-    engine = create_engine('mysql+mysqldb://{0}:{1}@localhost:3306/{2}'.format(user, pwd, db))
+    connect = '{0}://{1}:{2}@{3}:3306/{4}'.format(dia, user, pwd, host, db)
+
+    engine = create_engine(connect)
 
     Session = sessionmaker(bind=engine)
     session = Session()
