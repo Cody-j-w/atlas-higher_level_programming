@@ -24,7 +24,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state_records = session.query(State).filter_by(id=1)
+    state = session.query(State).first()
 
-    for state in state_records:
-        print("{}: {}".format(state.id, state.name))
+    print("{}: {}".format(state.id, state.name))
