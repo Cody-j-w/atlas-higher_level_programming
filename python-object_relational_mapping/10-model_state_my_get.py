@@ -29,4 +29,4 @@ if __name__ == '__main__':
     if record is None:
         print("Not found")
     else:
-        print(state_record.id)
+        print(record.id)
