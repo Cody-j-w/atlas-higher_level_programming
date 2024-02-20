@@ -8,19 +8,21 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sys import argv
 
-if len(argv) > 1:
-    user = argv[1]
-if len(argv) > 2:
-    pwd = argv[2]
-if len(argv) > 3:
-    db = argv[3]
+if __name__ == '__main__':
 
-engine = create_engine('mysql+mysqldb://{0}:{1}@localhost:3306/{2}'.format(user, pwd, db))
+    if len(argv) > 1:
+        user = argv[1]
+    if len(argv) > 2:
+        pwd = argv[2]
+    if len(argv) > 3:
+        db = argv[3]
 
-Session = sessionmaker(bind=engine)
-session = Session()
+    engine = create_engine('mysql+mysqldb://{0}:{1}@localhost:3306/{2}'.format(user, pwd, db))
 
-state_records = session.query(State).all()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-for state in state_records:
-    print("{}: {}".format(state.id, state.name))
+    state_records = session.query(State).all()
+
+    for state in state_records:
+        print("{}: {}".format(state.id, state.name))
