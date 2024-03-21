@@ -8,7 +8,7 @@ argv.forEach((val, index) => {
     flag = 'argument provided';
     console.log(val);
   }
-})
+});
 if (flag === 'too short') {
-  console.log('No argument')
+  console.log('No argument');
 }
