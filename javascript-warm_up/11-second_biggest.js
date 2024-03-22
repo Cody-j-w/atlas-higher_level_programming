@@ -2,8 +2,8 @@
 
 const { argv } = require('node:process');
 
-let max = -Infinity;
-let res = -Infinity;
+let max = 0;
+let res = 0;
 
 for (let i = 2; i < argv.length; i++) {
   const value = Number(argv[i]);
