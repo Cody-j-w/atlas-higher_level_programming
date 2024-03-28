@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const { argv, env } = require('node:process');
-const request = require(`${env.NODE_PATH}/request`);
+const request = require(`${env.NODE_PATH}request`);
 
 request(argv[2], (err, res, body) => {
   if (err) {
