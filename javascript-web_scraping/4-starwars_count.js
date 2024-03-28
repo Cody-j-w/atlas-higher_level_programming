@@ -10,9 +10,9 @@ request(argv[2], (err, res, body) => {
     const data = JSON.parse(body);
     for (const film of data.results) {
       for (const character of film.characters) {
-        tokens = character.split('/');
+        const tokens = character.split('/');
         if (tokens[5] === '18') {
-            count++;
+          count++;
         }
       }
     }
