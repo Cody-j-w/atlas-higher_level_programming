@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { argv, env } = require('node:process');
+const { argv } = require('node:process');
 const request = require('request');
 
 request(argv[2], (err, res, body) => {
