@@ -23,7 +23,9 @@ request(API, (err, res, body) => {
         count++;
       }
     }
-    todosList[id] = count;
+    if (count !== 0) {
+      todosList[id] = count;
+    }
   }
   console.log(todosList);
 });
