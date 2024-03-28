@@ -10,8 +10,9 @@ request(argv[2], (err, res, body) => {
     const data = JSON.parse(body);
     for (const film of data.results) {
       for (const character of film.characters) {
-        if (character === 'https://swapi-api.hbtn.io/api/people/18/') {
-          count++;
+        tokens = character.split('/');
+        if (tokens[5] === '18') {
+            count++;
         }
       }
     }
